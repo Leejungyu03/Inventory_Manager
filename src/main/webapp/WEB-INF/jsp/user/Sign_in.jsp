@@ -11,7 +11,7 @@
 	<section class="signIn">
 		<div class="signIn-inner">
 		
-			<h1>Community</h1>
+			<h1>Inventory Manager</h1>
 			
 			<div class="signIn-form-area">
 				<input 

@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	
   $('.signUp-btn').click(function() {
-    location.href="/community/sign_up_view"
+    location.href="/manager/sign_up_view"
   })
 
   $('.login-btn').click(function() {

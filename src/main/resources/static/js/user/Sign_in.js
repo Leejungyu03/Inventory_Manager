@@ -25,7 +25,7 @@ $(document).ready(function() {
       success : function(data) {
         if (data.result === 'success') {
           alert(`${data.name}님 환영합니다.`);
-          location.href = "/manager/main_view"
+          location.href = "/main"
         } else {
           alert(data.error_message);
           loginId.val('');

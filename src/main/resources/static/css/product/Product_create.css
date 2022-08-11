@@ -1,0 +1,86 @@
+.product-create-inner {
+  max-width: 800px;
+	position: relative;
+	margin: 0 auto;
+  border: 3px solid #AAAAAA;
+}
+
+.product-create {
+  margin: 20px 0px;
+}
+.product-create .product-create-head {
+  height: 90px;
+  display: flex;
+  border-bottom: 1px solid #AAAAAA;
+}
+.product-create .product-create-head .head-image-area {
+  width: 10%;
+  text-align: center;
+}
+.product-create .product-create-head .head-image-area img {
+  width: 60px;
+  padding-top: 15px;
+  cursor: pointer;
+}
+.product-create .product-create-head .title {
+  width: 80%;
+  line-height: 80px;
+  font-size: 45px;
+  font-weight: 600;
+  text-align: center;
+}
+.product-create .product-create-head .uplopad-product-btn-area {
+  width: 10%;
+  text-align: start;
+}
+.product-create .product-create-head .uplopad-product-btn-area .uplopad-product-btn {
+  width: 60%;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.product-create .product-create-content {
+  text-align: center;
+  border-bottom: 1px solid #AAAAAA;
+}
+.product-create .product-create-content input, textarea {
+  width: 70%;
+  padding: 20px 5px;
+  margin-top: 5%;
+  border: none;
+  border-bottom: 1px solid #DFDFDF;
+}
+.product-create .product-create-content input[type="text"]:focus, textarea:focus {
+  outline: none;
+}
+.product-create .product-create-content input[type="text"].title {
+  font-size: 22px;
+  font-weight: 600;
+}
+.product-create .product-create-content .content {
+  font-size: 20px;
+  resize: none;
+}
+.product-create .product-create-content .stock {
+  font-size: 18px;
+  padding: 5px 5px;
+  margin-bottom: 5%;
+}
+
+.product-create .product-create-image {
+  min-height: 300px;
+}
+.product-create .product-create-image .upload-icon-area {
+  text-align: center;
+  padding-top: 20px;
+}
+.product-create .product-create-image .upload-icon-area img {
+  cursor: pointer;
+}
+.product-create .product-create-image .upload-image-area {
+  text-align: center;
+  padding: 20px 0;
+}
+.product-create .product-create-image .upload-image-area img {
+  max-width: 70%;
+}

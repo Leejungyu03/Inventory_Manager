@@ -14,7 +14,7 @@
 			<h1>Inventory Manager</h1>
 			
 			<div class="header-button-area">
-				<button class="post">상품등록</button>
+				<button class="product_create">상품등록</button>
 				<button class="sign_out">로그아웃</button>
 			</div>
 				

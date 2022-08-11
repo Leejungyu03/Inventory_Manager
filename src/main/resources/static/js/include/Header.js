@@ -14,4 +14,8 @@ $(document).ready(function() {
       }
     });
   });
+
+  $('.product_create').click(function() {
+    location.href = "/product/create";
+  });
 })

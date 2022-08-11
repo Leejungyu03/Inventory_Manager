@@ -12,23 +12,11 @@ header {
 	border-bottom: 1px solid #AAAAAA;
 }
 header h1 {
-	width: 50%;
+	width: 70%;
 	margin: 0;
 	padding-top: 15px;
-	font-size: 45px;
+	font-size: 40px;
 	font-weight: 900;
-}
-
-header .header-search-area {
-	width: 20%;
-	padding-top: 25px;
-}
-header .header-search-area .search {
-	width: 100%;
-	border-radius: 20px;
-	padding: 10px 10px;
-	font-size: 14px;
-	
 }
 
 header .header-button-area {
@@ -41,15 +29,15 @@ header .header-button-area button {
 	line-height: 15px;
 	margin-left: 8%;
 	padding: 10px;
-	font-size: 22px;
+	font-size: 18px;
 	font-weight: 900;
 	cursor: pointer;
 }
 header .header-button-area .post {
 	background-color: transparent;
 }
-header .header-button-area .sign_in {
-	background-color: #0066FF;
+header .header-button-area .sign_out {
+	background-color: #FF4E4E;
 	color: white;
 	border: none;
 }

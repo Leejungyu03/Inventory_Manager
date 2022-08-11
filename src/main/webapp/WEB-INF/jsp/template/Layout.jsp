@@ -17,7 +17,7 @@
 </head>
 
 <body>
-	<c:if test="${(viewName eq 'main')}">
+	<c:if test="${(viewName eq 'main/Main')}">
 		<jsp:include page="../include/Header.jsp" />
 	</c:if>
 	<jsp:include page="../${viewName}.jsp" />

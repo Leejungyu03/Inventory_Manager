@@ -69,8 +69,8 @@ public class UserRestController {
     	result.put("result", "success");
     	result.put("name", user.getName());
     	
+      session.setAttribute("userId", user.getId());
     	session.setAttribute("loginId", user.getLoginId());
-    	session.setAttribute("password", user.getPassword());
     	session.setAttribute("name", user.getName());
     } else {
     	result.put("result", "error");
@@ -78,5 +78,13 @@ public class UserRestController {
     }
     
     return result;
+  }
+
+  @RequestMapping("/sign_out")
+  public void signOut(HttpSession session) {
+
+    session.removeAttribute("userId");
+    session.removeAttribute("loginId");
+    session.removeAttribute("name");
   }
 }

@@ -11,19 +11,11 @@
 	<header>
 		<div class="header-inner">
 		
-			<h1>Community</h1>
-			
-			<div class="header-search-area">
-				<input 
-					type="text" 
-					class="search"
-				/>
-			</div>
+			<h1>Inventory Manager</h1>
 			
 			<div class="header-button-area">
-				<button class="post">글쓰기</button>
-				<button class="sign_in">로그인</button>
-				<button class="sign_up">로그아웃</button>
+				<button class="post">상품등록</button>
+				<button class="sign_out">로그아웃</button>
 			</div>
 				
 		</div>

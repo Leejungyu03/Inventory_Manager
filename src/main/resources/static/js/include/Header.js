@@ -1,3 +1,17 @@
- $(document).ready(function() {
+$(document).ready(function() {
 	
+  $('.sign_out').click(function() {
+
+    $.ajax({
+      type : "POST",
+      url : "/user/sign_out",
+      success : function(e) {
+        alert("로그아웃되었습니다.");
+        location.reload();
+      },
+      error : function(e) {
+        alert("로그아웃에 실패했습니다.")
+      }
+    });
+  });
 })

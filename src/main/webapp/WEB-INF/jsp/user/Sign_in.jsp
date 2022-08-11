@@ -16,7 +16,7 @@
 			<div class="signIn-form-area">
 				<input 
 					type="text" 
-					class="userId"
+					class="loginId"
 					placeholder="아이디를 입력하세요."
 				/>
 

@@ -9,13 +9,13 @@
  		FROM
  			`user`
  		WHERE
- 			`userId` = #{userId}
+ 			`loginId` = #{loginId}
  	</select>
  	
  	<insert id="insertUser" parameterType="map">
  		INSERT INTO `user`
  		(
- 			`userId`
+ 			`loginId`
  			,`password`
  			,`name`
  			,`createdAt`
@@ -23,7 +23,7 @@
  		)
  		VALUES
  		(
- 			#{userId}
+ 			#{loginId}
  			,#{password}
  			,#{name}
  			,NOW()
@@ -31,10 +31,10 @@
  		)
  	</insert>
 	
-	<select id="selectUserByUserIdAndPassword" parameterType="map" resultType="com.manager.user.model.User">
+	<select id="selectUserByLoginIdAndPassword" parameterType="map" resultType="com.manager.user.model.User">
 		SELECT
 			`id`
-			,`userId`
+			,`loginId`
 			,`password`
 			,`name`
 			,`createdAt`
@@ -42,7 +42,7 @@
 		FROM
 			`user`
 		WHERE
-			`userId` = #{userId}
+			`loginId` = #{loginId}
 			AND
 			`password` = #{password}
 	</select>

@@ -8,14 +8,14 @@ import com.manager.user.model.User;
 @Repository
 public interface UserDAO {
 
-  public boolean existUserByLoginId(String userId);
+  public boolean existUserByLoginId(String loginId);
   
   public int insertUser(
-		  @Param("userId") String userId,
+		  @Param("loginId") String loginId,
 		  @Param("password") String password,
 		  @Param("name") String name);
 
-	public User selectUserByUserIdAndPassword(
-		@Param("userId") String userID,
+	public User selectUserByLoginIdAndPassword(
+		@Param("loginId") String loginId,
 		@Param("password") String password);
 }

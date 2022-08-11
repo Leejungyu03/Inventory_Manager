@@ -15,22 +15,22 @@
 			
 			<div class="signUp-form-area">
 
-        <div class="userId-area">
+        <div class="loginId-area">
           <input 
             type="text" 
-            class="userId"
+            class="loginId"
             placeholder="아이디를 입력하세요."
           />
           <button 
             type="button" 
-            class="userId-check"
+            class="loginId-check"
           >
             중복확인
           </button>
         </div>
 
-        <div class="userId-duplicated">이미 사용중인 ID입니다.</div>
-				<div class="userId-ok">사용 가능한 ID 입니다.</div>
+        <div class="loginId-duplicated">이미 사용중인 ID입니다.</div>
+				<div class="loginId-ok">사용 가능한 ID 입니다.</div>
 
 				<input 
 					type="password" 

@@ -21,13 +21,13 @@ public class UserRestController {
   @Autowired
   private UserBO userBO;
   
-  @RequestMapping("/is_duplicated_userId")
-  public Map<String, Object> isDuplicatedUserId(
-    @RequestParam("userId") String userId) {
+  @RequestMapping("/is_duplicated_loginId")
+  public Map<String, Object> isDuplicatedLoginId(
+    @RequestParam("loginId") String loginId) {
       
       Map<String, Object> result = new HashMap<>();
       
-      boolean isDuplicatd = userBO.existUserByUserId(userId);
+      boolean isDuplicatd = userBO.existUserByLoginId(loginId);
       if (isDuplicatd) {
     	  result.put("result", "success");
       } else {
@@ -40,11 +40,11 @@ public class UserRestController {
 
   @PostMapping("/sign_up")
   public Map<String, Object> signUp(
-    @RequestParam("userId") String userId,
+    @RequestParam("loginId") String loginId,
     @RequestParam("password") String password,
     @RequestParam("name") String name) {
 
-      int row = userBO.addUser(userId, password, name);
+      int row = userBO.addUser(loginId, password, name);
       
       Map<String, Object> result = new HashMap<>();
       if (row < 1) {
@@ -58,18 +58,18 @@ public class UserRestController {
 
   @PostMapping("/sign_in")
   public Map<String, Object> signIn(
-    @RequestParam("userId") String userId,
+    @RequestParam("loginId") String loginId,
     @RequestParam("password") String password,
     HttpSession session) {
 
-    User user = userBO.getUserByUserIdAndPassword(userId, password);
+    User user = userBO.getUserByLoginIdAndPassword(loginId, password);
     
     Map<String, Object> result = new HashMap<>();
     if (user != null) {
     	result.put("result", "success");
     	result.put("name", user.getName());
     	
-    	session.setAttribute("userId", user.getUserId());
+    	session.setAttribute("loginId", user.getLoginId());
     	session.setAttribute("password", user.getPassword());
     	session.setAttribute("name", user.getName());
     } else {

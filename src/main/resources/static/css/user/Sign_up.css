@@ -33,13 +33,13 @@
   outline: none;
   border: solid 1px #AAAAAA;
 }
-.signUp .signUp-form-area .userId-area {
+.signUp .signUp-form-area .loginId-area {
   display: flex;
 }
-.signUp .signUp-form-area .userId-area input.userId {
+.signUp .signUp-form-area .loginId-area input.loginId {
   width: 80%;
 }
-.signUp .signUp-form-area .userId-area button.userId-check {
+.signUp .signUp-form-area .loginId-area button.loginId-check {
   width: 20%;
   height: 50px;
   margin-top: 5%;
@@ -51,14 +51,14 @@
   border-radius: 10px;
   cursor: pointer;
 }
-.signUp .signUp-form-area .userId-duplicated {
+.signUp .signUp-form-area .loginId-duplicated {
   text-align: start;
   margin-top: 2%;
   font-weight: 600;
   color: #FF0000;
   display: none;
 }
-.signUp .signUp-form-area .userId-ok {
+.signUp .signUp-form-area .loginId-ok {
   text-align: start;
   margin-top: 2%;
   font-weight: 600;

@@ -5,10 +5,10 @@ $(document).ready(function() {
   })
 
   $('.login-btn').click(function() {
-    const userId = $('.userId').val().trim();
+    const loginId = $('.loginId').val().trim();
     const password = $('.password').val();
 
-    if (userId === '') {
+    if (loginId === '') {
       alert("아이디를 입력해주세세요");
       return;
     }
@@ -21,14 +21,14 @@ $(document).ready(function() {
     $.ajax({
       type: "POST",
       url: "/user/sign_in",
-      data: {"userId" : userId, "password" : password},
+      data: {"loginId" : loginId, "password" : password},
       success : function(data) {
         if (data.result === 'success') {
           alert(`${data.name}님 환영합니다.`);
           location.href = "/manager/main_view"
         } else {
           alert(data.error_message);
-          userId.val('');
+          loginId.val('');
           password.val('');
         }
       },

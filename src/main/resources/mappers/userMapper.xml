@@ -30,4 +30,20 @@
  			,NOW()
  		)
  	</insert>
+	
+	<select id="selectUserByUserIdAndPassword" parameterType="map" resultType="com.manager.user.model.User">
+		SELECT
+			`id`
+			,`userId`
+			,`password`
+			,`name`
+			,`createdAt`
+			,`updatedAt`
+		FROM
+			`user`
+		WHERE
+			`userId` = #{userId}
+			AND
+			`password` = #{password}
+	</select>
  </mapper>

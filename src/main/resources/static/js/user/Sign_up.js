@@ -17,7 +17,7 @@ $(document).ready(function() {
       url : "/user/is_duplicated_userId",
       data : {"userId" : userId},
       success : function(data) {
-        if (data.result) {
+        if (data.result === 'success') {
           // 중복일때
           $('.userId-ok').css('display', 'none')
           $('.userId-duplicated').css('display', 'block')
@@ -68,9 +68,11 @@ $(document).ready(function() {
       url : "/user/sign_up",
       data : {"userId" : userId, "password" : password, "name" : name},
       success : function(data) {
-        if (data.result != 'error') {
+        if (data.result === 'success') {
           alert("회원가입 완료");
           location.href = "/user/sign_in_view";
+        } else {
+          alert(data.error_message);
         }
       },
       error : function(e) {

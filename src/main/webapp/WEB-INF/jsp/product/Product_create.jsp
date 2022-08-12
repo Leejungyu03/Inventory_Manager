@@ -56,18 +56,26 @@
 
       <div class="product-create-image">
         <div class="upload-icon-area">
-          <img 
-            src="/image/imageIcon.png"
-            class="upload-image-btn"
-            alt="이미지 추가 아이콘"
+          <label for="uploadImageInput">
+            <img 
+              src="/image/imageIcon.png"
+              class="upload-image-btn"
+              alt="이미지 추가 아이콘"
+            />
+          </label>
+          <input 
+            type="file" 
+            id="uploadImageInput" 
+            accept="image/*"
           />
         </div>
 
-        <div class="upload-image-area">
-          <img 
-            src="https://miro.medium.com/max/725/0*9Hx_vych9QDEcQ_t" 
-            alt="추가된 이미지"
-          />
+        <div class="sample-image-area">
+	         <img 
+	           src="/image/smapleImageIcon.png" 
+	           alt="추가된 이미지"
+             class="sample-image"
+	         />
         </div>
       </div>
 				

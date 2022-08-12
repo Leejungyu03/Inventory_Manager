@@ -28,7 +28,6 @@ $(document).ready(function() {
         }
       },
       error : function(e) {
-        console.log(e)
         alert("아이디 중복확인에 실패했습니다.");
       }
     });

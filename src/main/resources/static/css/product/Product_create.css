@@ -66,6 +66,9 @@
   padding: 5px 5px;
   margin-bottom: 5%;
 }
+.product-create .product-create-content .stock:focus {
+  outline: none;
+}
 
 .product-create .product-create-image {
   min-height: 300px;
@@ -77,10 +80,13 @@
 .product-create .product-create-image .upload-icon-area img {
   cursor: pointer;
 }
-.product-create .product-create-image .upload-image-area {
+.product-create .product-create-image .upload-icon-area input[type="file"] {
+  display: none;
+}
+.product-create .product-create-image .sample-image-area {
   text-align: center;
   padding: 20px 0;
 }
-.product-create .product-create-image .upload-image-area img {
+.product-create .product-create-image .sample-image-area img {
   max-width: 70%;
 }

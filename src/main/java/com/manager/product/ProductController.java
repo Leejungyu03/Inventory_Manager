@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ProductController {
   
-  @RequestMapping("/create")
+  @RequestMapping("/create_view")
   public String productCreate(Model model) {
 
     model.addAttribute("title", "상품 추가");

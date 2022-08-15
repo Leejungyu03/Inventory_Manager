@@ -8,22 +8,46 @@ $(document).ready(function() {
     let title = $('.title').val();
     let content = $('.content').val();
     let stock = $('.stock').val();
-    let imgUrl = URL.createObjectURL($('#uploadImageInput')[0].files[0]);
+    let imageFile = ($('#uploadImageInput')[0].files[0]);
+
+    if (title === '') {
+      alert("상품명을 입력해주세요.");
+      return;
+    }
+
+    if (content === '') {
+      alert("상품 설명을 입력해주세요.");
+      return;
+    }
+
+    if (stock === '') {
+      alert("수량을 입력해주세요.");
+      return;
+    }
+
+    let formData = new FormData();
+    formData.append("title", title);
+    formData.append("content", content);
+    formData.append("stock", stock);
+    formData.append("imageFile", imageFile);
 
     $.ajax({
       type : "POST",
       url : "/product/create",
-      data : {
-        "title" : title,
-        "content" : content,
-        "stock" : stock,
-        "imgUrl" : imgUrl
-      },
+      enctype : "multipart/form-data",
+      data : formData,
+      processData : false,
+			contentType : false,
       success : function(data) {
-        alert("성공")
+        if (data.result === 'success') {
+          alert("업로드 완료되었습니다");
+          location.href = "/manager/main_view"
+        } else {
+          alert("업로드에 실패하였습니다.");
+        }
       },
       error : function(e) {
-        alert("실패")
+        alert("업로드 실패하였습니다.");
       }
     })
   });

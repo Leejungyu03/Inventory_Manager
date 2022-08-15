@@ -22,7 +22,7 @@
   padding-top: 15px;
   cursor: pointer;
 }
-.product-create .product-create-head .title {
+.product-create .product-create-head .product-create-title {
   width: 80%;
   line-height: 80px;
   font-size: 45px;

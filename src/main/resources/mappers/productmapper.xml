@@ -2,25 +2,42 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
- <mapper namespace="com.manager.product.dao.ProductDAO">
+<mapper namespace="com.manager.product.dao.ProductDAO">
+	<select id="selectProduct" resultType="com.manager.product.model.Product">
+		SELECT
+			`id`
+			,`userId`
+			,`userName`
+			,`title`
+			,`content`
+			,`stock`
+			,`imageUrl`
+			,`createdAt`
+			,`updatedAt`
+		FROM
+			`product`
+	</select>
+
  	<insert id="insertProduct" parameterType="map">
  		INSERT INTO `product`
  		(
  			`userId`
- 			,`title`
- 			,`content`
- 			,`stock`
- 			,`imageUrl`
- 			,`createdAt`
- 			,`updatedAt`
+ 			,`userName`
+			,`title`
+			,`content`
+			,`stock`
+			,`imageUrl`
+			,`createdAt`
+			,`updatedAt`
  		)
  		VALUES
- 		(
+ 		(	
  			#{userId}
+ 			,#{userName}
  			,#{title}
  			,#{content}
  			,#{stock}
- 			,#{imageUrl}
+ 			,#{imagePath}
  			,NOW()
  			,NOW()
  		)

@@ -20,7 +20,7 @@
         />
         </div>
 
-        <div class="title">상품 추가</div>
+        <div class="product-create-title">상품 추가</div>
         
         <div class="uplopad-product-btn-area">
           <img 
@@ -35,13 +35,13 @@
         <input 
           type="text"
           class="title"
-          placeholder="제목을 입력해주세요."
+          placeholder="상품명을 입력해주세요."
           maxlength="30"
         />
 
         <textarea 
           class="content"
-          placeholder="내용을 입력해주세요."
+          placeholder="상품 설명을 입력해주세요."
           rows="10"
           maxlength="100"
         ></textarea>

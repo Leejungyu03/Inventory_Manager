@@ -16,6 +16,8 @@
 			,`updatedAt`
 		FROM
 			`product`
+		ORDER BY 
+			`updatedAt` DESC
 	</select>
 
  	<insert id="insertProduct" parameterType="map">
@@ -37,9 +39,17 @@
  			,#{title}
  			,#{content}
  			,#{stock}
- 			,#{imagePath}
+ 			,#{imageUrl}
  			,NOW()
  			,NOW()
  		)
  	</insert>
+ 	
+ 	<delete id="deleteProductByProductId" parameterType="int">
+	 	DELETE
+	 	FROM
+	 		`product`
+		WHERE
+			`id` = #{productId}
+ 	</delete>
  </mapper>

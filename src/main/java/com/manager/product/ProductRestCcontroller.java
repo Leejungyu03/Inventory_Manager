@@ -6,8 +6,12 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +22,8 @@ import com.manager.product.bo.ProductBO;
 @RequestMapping("/product")
 @RestController
 public class ProductRestCcontroller {
+
+  private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
   @Autowired
   private ProductBO productBO;
@@ -44,6 +50,27 @@ public class ProductRestCcontroller {
       result.put("result", "success");
     }
 
+    return result;
+  }
+
+  @PutMapping("/update")
+  public Map<String, Object> productupdate() {
+    return null;
+  }
+
+  @DeleteMapping("/delete")
+  public Map<String, Object> productDelete(
+    @RequestParam("productId") int productId) {
+
+    int row = productBO.deleteProductByProductId(productId);
+    
+    logger.debug("{}", row);
+    Map<String, Object> result = new HashMap<>();
+    if (row > 0) {
+      result.put("result", "success");
+    } else {
+      result.put("result", "error");
+    }
     return result;
   }
 }

@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   $('.back-btn').click(function() {
-    location.href = "/main";
+    location.href = "/manager/main_view";
   });
 
   $('.uplopad-product-btn').click(function() {

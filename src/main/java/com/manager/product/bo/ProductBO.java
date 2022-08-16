@@ -25,19 +25,23 @@ public class ProductBO {
 
   public int addProduct(String loginId, Integer userId, String userName, String title, String content, int stock, MultipartFile imageFile) {
 		
-    String imagePath = null;
+    String imageUrl = null;
 		if (imageFile != null) {
 			try {
-				imagePath = fileManagerService.saveFile(loginId, imageFile);
+				imageUrl = fileManagerService.saveFile(loginId, imageFile);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
 
-    return productDAO.insertProduct(userId, userName, title, content, stock, imagePath);
+    return productDAO.insertProduct(userId, userName, title, content, stock, imageUrl);
   }
 
-  public List<Product> getProduct() {
-    return productDAO.selectProduct();
-  }
+ public List<Product> getProduct() {
+   return productDAO.selectProduct();
+ }
+
+ public int deleteProductByProductId(int productId) {
+  return productDAO.deleteProductByProductId(productId);
+ }
 }

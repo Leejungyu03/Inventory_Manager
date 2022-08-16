@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.manager.product.bo.ProductBO;
+import com.manager.product.model.Product;
+import com.mysql.cj.Session;
 
 @RequestMapping("/product")
 @RestController
@@ -54,8 +56,27 @@ public class ProductRestCcontroller {
   }
 
   @PutMapping("/update")
-  public Map<String, Object> productupdate() {
-    return null;
+  public Map<String, Object> productupdate(
+    @RequestParam("productId") int productId,
+    @RequestParam("title") String title,
+    @RequestParam("content") String content,
+    @RequestParam("stock") int stock,
+    @RequestParam(value="imageFile", required = false) MultipartFile imageFile,
+    HttpServletRequest request) {
+
+    HttpSession session = request.getSession();
+
+    String loginId = (String) session.getAttribute("loginId");
+    int row = productBO.updateProduct(loginId, productId, title, content, stock, imageFile);
+
+    Map<String, Object> result = new HashMap<>();
+    if (row > 0) {
+      result.put("result", "success");
+    } else {
+      result.put("result", "error");
+    }
+
+    return result;
   }
 
   @DeleteMapping("/delete")

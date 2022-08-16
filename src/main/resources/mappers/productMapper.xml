@@ -19,6 +19,23 @@
 		ORDER BY 
 			`updatedAt` DESC
 	</select>
+	
+	<select id="selectProductByProductId" resultType="com.manager.product.model.Product">
+		SELECT
+			`id`
+			,`userId`
+			,`userName`
+			,`title`
+			,`content`
+			,`stock`
+			,`imageUrl`
+			,`createdAt`
+			,`updatedAt`
+		FROM
+			`product`
+		WHERE
+			`id` = #{productId}
+	</select>
 
  	<insert id="insertProduct" parameterType="map">
  		INSERT INTO `product`
@@ -44,6 +61,21 @@
  			,NOW()
  		)
  	</insert>
+ 	
+ 	<update id="updateProduct" parameterType="map">
+ 		UPDATE `product`
+ 		SET
+ 			`title` = #{title}
+			,`content` = #{content}
+			,`stock` = #{stock}
+			<!-- imagePath가 있을 때에만 수정한다. -->
+			<if test="imageUrl != null">
+				,`imageUrl` = #{imageUrl}
+			</if>
+			,`updatedAt` = NOW()
+		WHERE
+			`id` = #{productId}
+ 	</update>
  	
  	<delete id="deleteProductByProductId" parameterType="int">
 	 	DELETE

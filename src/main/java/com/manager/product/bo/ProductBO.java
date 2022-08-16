@@ -42,6 +42,39 @@ public class ProductBO {
  }
 
  public int deleteProductByProductId(int productId) {
+
+  Product product = getProductByProductId(productId);
+  String imageUrl = product.getImageUrl();
+
+  if (imageUrl != null) {
+    try {
+      fileManagerService.deleteFile(imageUrl);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
   return productDAO.deleteProductByProductId(productId);
+ }
+
+ public Product getProductByProductId(int productId) {
+  return productDAO.selectProductByProductId(productId);
+ }
+
+ public int updateProduct(String loginId, int productId, String title, String content, int stock, MultipartFile imageFile) {
+  
+  Product product = getProductByProductId(productId);
+  
+  String imageUrl = null;
+		if (imageFile != null) {
+			try {
+        fileManagerService.deleteFile(product.getImageUrl());
+				imageUrl = fileManagerService.saveFile(loginId, imageFile);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+  
+  return productDAO.updateProduct(productId, title, content, stock, imageUrl);
  }
 }

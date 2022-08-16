@@ -21,4 +21,13 @@ public interface ProductDAO {
 	public List<Product> selectProduct();
 
 	public int deleteProductByProductId(int productId);
+
+	public Product selectProductByProductId(int productId);
+
+	public int updateProduct(
+		@Param("productId") int productId, 
+		@Param("title") String title, 
+		@Param("content") String content, 
+		@Param("stock") int stock, 
+		@Param("imageUrl") String imageUrl);
 }

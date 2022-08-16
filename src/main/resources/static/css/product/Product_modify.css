@@ -1,0 +1,92 @@
+.product-modify-inner {
+  max-width: 800px;
+  position: relative;
+  margin: 0 auto;
+  border: 3px solid #AAAAAA;
+}
+  
+product-modify {
+  margin: 20px 0px;
+}
+.product-modify .product-modify-head {
+  height: 90px;
+  display: flex;
+  border-bottom: 1px solid #AAAAAA;
+}
+.product-modify .product-modify-head .head-image-area {
+  width: 10%;
+  text-align: center;
+}
+.product-modify .product-modify-head .head-image-area img {
+  width: 60px;
+  padding-top: 15px;
+  cursor: pointer;
+}
+.product-modify .product-modify-head .product-modify-title {
+  width: 80%;
+  line-height: 80px;
+  font-size: 45px;
+  font-weight: 600;
+  text-align: center;
+}
+.product-modify .product-modify-head .uplopad-product-btn-area {
+  width: 10%;
+  text-align: start;
+}
+.product-modify .product-modify-head .uplopad-product-btn-area .uplopad-product-btn {
+  width: 60%;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.product-modify .product-modify-content {
+  text-align: center;
+  border-bottom: 1px solid #AAAAAA;
+}
+.product-modify .product-modify-content input, textarea {
+  width: 70%;
+  padding: 20px 5px;
+  margin-top: 5%;
+  border: none;
+  border-bottom: 1px solid #DFDFDF;
+}
+.product-modify .product-modify-content input[type="text"]:focus, textarea:focus {
+  outline: none;
+}
+.product-modify .product-modify-content input[type="text"].title {
+  font-size: 22px;
+  font-weight: 600;
+}
+.product-modify .product-modify-content .content {
+  font-size: 20px;
+  resize: none;
+}
+.product-modify .product-modify-content .stock {
+  font-size: 18px;
+  padding: 5px 5px;
+  margin-bottom: 5%;
+}
+.product-modify .product-modify-content .stock:focus {
+  outline: none;
+}
+
+.product-modify .product-modify-image {
+  min-height: 300px;
+}
+.product-modify .product-modify-image .upload-icon-area {
+  text-align: center;
+  padding-top: 20px;
+}
+.product-modify .product-modify-image .upload-icon-area img {
+  cursor: pointer;
+}
+.product-modify .product-modify-image .upload-icon-area input[type="file"] {
+  display: none;
+}
+.product-modify .product-modify-image .sample-image-area {
+  text-align: center;
+  padding: 20px 0;
+}
+.product-modify .product-modify-image .sample-image-area img {
+  max-width: 70%;
+}

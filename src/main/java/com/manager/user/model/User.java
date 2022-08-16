@@ -1,13 +1,15 @@
 package com.manager.user.model;
 
+import java.util.Date;
+
 public class User {
   
   private int id;
   private String loginId;
   private String password;
   private String name;
-  private String createdAt;
-  private String updatedAt;
+  private Date createdAt;
+  private Date updatedAt;
 
   public int getId() {
     return id;
@@ -33,16 +35,16 @@ public class User {
   public void setName(String name) {
     this.name = name;
   }
-  public String getCreatedAt() {
+  public Date getCreatedAt() {
     return createdAt;
   }
-  public void setCreatedAt(String createdAt) {
+  public void setCreatedAt(Date createdAt) {
     this.createdAt = createdAt;
   }
-  public String getUpdatedAt() {
+  public Date getUpdatedAt() {
     return updatedAt;
   }
-  public void setUpdatedAt(String updatedAt) {
+  public void setUpdatedAt(Date updatedAt) {
     this.updatedAt = updatedAt;
   }
 }

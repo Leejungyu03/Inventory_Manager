@@ -1,0 +1,96 @@
+.main-inner {
+	max-width: 1100px;
+	position: relative;
+	margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.main {
+
+}
+.main .main-card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .main-card-list .main-card {
+  width: 320px;
+  /* height: 500px; */
+  margin-left: 6%;
+  margin-top: 5.5%;
+  border: 1px solid #aaa;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px 5px grey;
+}
+.main .main-card-list .main-card:nth-child(3n+1) {
+  margin-left: 0;
+}
+.main .main-card-list .main-card .card-image-area {
+  min-height: 222px;
+  position: relative;
+}
+.main .main-card-list .main-card .card-image-area img {
+  max-width: 68%;
+  max-height: 280px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.main .main-card-list .main-card .card-text-area {
+  
+}
+.main .main-card-list .main-card .card-text-area .title {
+  font-size: 30px;
+  font-weight: 600;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+.main .main-card-list .main-card .card-text-area .content {
+  font-size: 18px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+.main .main-card-list .main-card .card-text-area .stock {
+  font-size: 18px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+.main .main-card-list .main-card .card-text-area .writer {
+  font-size: 14px;
+  font-weight: lighter;
+  padding-left: 10px;
+  margin: 10px 0;
+}
+.main .main-card-list .main-card .card-text-area .updatedDate {
+  font-size: 14px;
+  font-weight: lighter;
+  padding-left: 10px;
+  margin: 10px 0;
+  margin-bottom: 20px;
+}
+
+.main .main-card-list .main-card .card-btn-area {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.main .main-card-list .main-card .card-btn-area button {
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.main .main-card-list .main-card .card-btn-area .modify-btn {
+  background-color: #34B3F1;
+  color: white;
+}
+.main .main-card-list .main-card .card-btn-area .delete-btn {
+  background-color: #F24C4C;
+  color: white;
+}

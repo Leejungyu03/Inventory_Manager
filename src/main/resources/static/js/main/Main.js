@@ -21,7 +21,7 @@ $(document).ready(function() {
         }
       },
       error : function(e) {
-        alert("게시물 삭제에 실패햇습니다.");
+        alert("게시물 삭제에 실패했습니다.");
       }
     });
   });

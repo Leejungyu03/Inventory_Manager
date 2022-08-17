@@ -5,7 +5,9 @@ import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -87,4 +89,19 @@ public class UserRestController {
     session.removeAttribute("loginId");
     session.removeAttribute("name");
   }
+
+  @DeleteMapping("/delete")
+  public Map<String, Object> delete(@Param("userId") int userId) {
+
+    int row = userBO.deleteUser(userId);
+
+    Map<String, Object> result = new HashMap<>();
+    if (row > 0) {
+      result.put("result", "success");
+    } else {
+      result.put("result", "error");
+    }
+
+    return result;
+  } 
 }

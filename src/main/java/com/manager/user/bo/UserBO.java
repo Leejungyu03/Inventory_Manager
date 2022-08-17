@@ -1,5 +1,7 @@
 package com.manager.user.bo;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,5 +24,13 @@ public class UserBO {
 
   public User getUserByLoginIdAndPassword(String loginId, String password) {
     return userDAO.selectUserByLoginIdAndPassword(loginId, password);
+  }
+
+  public List<User> getUser() {
+    return userDAO.selectUser();
+  }
+
+  public int deleteUser(int userId) {
+    return userDAO.deleteUser(userId);
   }
 }

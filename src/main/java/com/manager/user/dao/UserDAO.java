@@ -1,5 +1,7 @@
 package com.manager.user.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -18,4 +20,8 @@ public interface UserDAO {
 	public User selectUserByLoginIdAndPassword(
 		@Param("loginId") String loginId,
 		@Param("password") String password);
+
+	public List<User> selectUser();
+
+	public int deleteUser(int userId);
 }

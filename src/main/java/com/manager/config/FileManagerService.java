@@ -12,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Component
 public class FileManagerService {
 	
-	public final static String FILE_UPLOAD_PATH = "C:\\Users\\l1j1g\\Desktop\\이준규\\대학교\\OJT\\02_자바프로그래밍 활용 실무\\과제\\TermProject\\Inventory_Manager\\src\\main\\resources\\static\\images/";
+	public final static String FILE_UPLOAD_PATH = "C:\\Users\\DABISU\\Desktop\\이준규\\대학교\\OJT\\02_자바프로그래밍 활용 실무\\과제\\TermProject\\Inventory_Manager\\Inventory_Manager\\src\\main\\resources\\static\\images/";
 	
 	public String saveFile(String loginId, MultipartFile imageFile) throws IOException {
 		// 파일명이 겹치지 않게 하기 위해 현재시간을 경로에 붙여준다.

@@ -18,8 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.manager.product.bo.ProductBO;
-import com.manager.product.model.Product;
-import com.mysql.cj.Session;
 
 @RequestMapping("/product")
 @RestController

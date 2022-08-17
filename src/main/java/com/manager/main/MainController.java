@@ -34,6 +34,7 @@ public class MainController {
     model.addAttribute("title", "상품 재고 관리");
     model.addAttribute("viewName", "main/Main");
     model.addAttribute("productList", productList);
+    model.addAttribute("loginId", loginId);
     model.addAttribute("userId", userId);
 
     return "template/Layout";

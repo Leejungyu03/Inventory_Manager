@@ -49,7 +49,7 @@
 
 						</div>
 						
-						<c:if test="${userId eq product.userId}">
+						<c:if test="${(userId eq product.userId) || (loginId eq 'admin')}">
 							<div class="card-btn-area">
 								<button class="modify-btn" data-product-id="${product.id}">수정하기</button>
 								<button class="delete-btn" data-product-id="${product.id}">삭제하기</button>

@@ -14,6 +14,14 @@
 			<h1>Inventory Manager</h1>
 			
 			<div class="header-button-area">
+				<c:choose>
+					<c:when test="${loginId eq 'admin'}">
+						<button class="manager-menu">관리자</button>
+					</c:when>
+					<c:otherwise>
+						<button class="none-btn"></button>
+					</c:otherwise>
+				</c:choose>
 				<button class="product_create">상품등록</button>
 				<button class="sign_out">로그아웃</button>
 			</div>

@@ -20,8 +20,10 @@ header h1 {
 }
 
 header .header-button-area {
-	width: 30%;
+	width: 40%;
 	padding-top: 25px;
+	display: flex;
+	justify-content: space-between;
 }
 header .header-button-area button {
 	width: 100px;
@@ -32,6 +34,12 @@ header .header-button-area button {
 	font-size: 18px;
 	font-weight: 900;
 	cursor: pointer;
+}
+header .header-button-area .none-btn {
+	visibility: hidden;
+}
+header .header-button-area .manager-menu {
+	background-color: transparent;
 }
 header .header-button-area .product_create {
 	background-color: transparent;

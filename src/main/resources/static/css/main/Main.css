@@ -5,9 +5,6 @@
   margin-bottom: 100px;
 }
 
-.main {
-
-}
 .main .main-card-list {
   display: flex;
   flex-wrap: wrap;
@@ -39,9 +36,6 @@
   right: 0;
 }
 
-.main .main-card-list .main-card .card-text-area {
-  
-}
 .main .main-card-list .main-card .card-text-area .title {
   font-size: 30px;
   font-weight: 600;

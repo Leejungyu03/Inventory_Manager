@@ -1,14 +1,9 @@
-@charset "UTF-8";
-
 .signUp-inner {
   max-width: 650px;
 	position: relative;
 	margin: 0 auto;
 }
 
-.signUp {
-
-}
 .signUp h1 {
   text-align: center;
   margin-top: 150px;
